@@ -1,0 +1,18 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model testebackend {
+  id        Int     @id
+  candidato String? @db.VarChar(45)
+  nome      String? @db.VarChar(50)
+  celular   String? @db.VarChar(45)
+  cpf       String? @db.VarChar(11)
+}
