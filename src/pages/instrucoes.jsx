@@ -223,15 +223,7 @@ function Instrucoes() {
       </Typography>
       <Typography sx={{ mb: 1, textAlign: "justify" }}>
         1) O Prisma já está instalado, configurado, sincronizado e os acessos
-        estão gerados, mas para iniciar o projeto, rode os comandos: {""}
-        <pre>
-            <code>
-              yarn e
-              yarn prisma generate
-            </code>
-          </pre>
-         {" "} 
-        para gerar os clientes do Prisma que você vai importar para cada API.{" "}
+        estão gerados. Você precisará apenas rodar o comando yarn para inciar o projeto e depois importar o prisma client para cada API.{" "}
       </Typography>
       <Typography sx={{ mb: 1, textAlign: "justify" }}>
         2) Caso não tenha experiência em yarn, prisma ou NextJS, aconselhamos
