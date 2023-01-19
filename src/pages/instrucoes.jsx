@@ -121,13 +121,12 @@ function Instrucoes() {
                <Typography sx={{ mb: 1, textAlign: "justify" }}>
                   3.1) A rota deve ter a seguinte estrutura:
                </Typography>
-               <pre>
-                  <code>
-                     {" "}
-                     localhost:xxxx/api/<span className="hljs-built_in">[SUA_API]</span>?
-                     <span className="hljs-built_in">date</span>=yyy-mm-dd
-                  </code>
-               </pre>
+               <code>
+                  {" "}
+                  localhost:xxxx/api/
+                  <span className="hljs-built_in">[SUA_API]</span>?
+                  <span className="hljs-built_in">date</span>=yyy-mm-dd
+               </code>
                <Typography sx={{ mb: 1, textAlign: "justify" }}>
                   3.2) Quando receber uma data válida, deve fazer a busca na tabela e
                   retornar status 200 e todos os campos de informação do feriado buscado.
@@ -226,10 +225,8 @@ function Instrucoes() {
          <Typography sx={{ mb: 1, textAlign: "justify" }}>
             1) O Prisma já está instalado, configurado, sincronizado e os acessos estão
             gerados, mas para iniciar o projeto, rode os comandos: {""}
-            <pre>
-               <code>yarn e yarn prisma generate</code>
-            </pre>{" "}
-            para gerar os clientes do Prisma que você vai importar para cada API.{" "}
+            <code>yarn e yarn prisma generate</code> para gerar os clientes do Prisma que
+            você vai importar para cada API.{" "}
          </Typography>
          <Typography sx={{ mb: 1, textAlign: "justify" }}>
             2) Caso não tenha experiência em yarn, prisma ou NextJS, aconselhamos que você
@@ -252,28 +249,28 @@ function Instrucoes() {
             Deixaremos abaixo alguns materiais para consulta que vão te ajudar a
             desenvolver o projeto, em ordem de relevância:
          </Typography>
-         <Typography sx={{ mb: 1, textAlign: "justify" }}>
-            <Link href="https://www.prisma.io/docs/getting-started/quickstart">
+         <Link href="https://www.prisma.io/docs/getting-started/quickstart">
+            <Typography sx={{ mb: 1, textAlign: "justify" }}>
                Documentação do Prisma (ignore as configurações iniciais, conforme tópico 2
                acima)
-            </Link>
-         </Typography>
-         <Typography sx={{ mb: 1, textAlign: "justify" }}>
-            <Link href="https://nextjs.org/learn/basics/api-routes/creating-api-routes">
+            </Typography>
+         </Link>
+         <Link href="https://nextjs.org/learn/basics/api-routes/creating-api-routes">
+            <Typography sx={{ mb: 1, textAlign: "justify" }}>
                NextJS: Rotas de APIs (explore outros tópicos da documentação do NextJS em
                caso de dúvidas)
-            </Link>
-         </Typography>
-         <Typography sx={{ mb: 1, textAlign: "justify" }}>
-            <Link href="https://blog.betrybe.com/desenvolvimento-web/yarn/">
+            </Typography>
+         </Link>
+         <Link href="https://blog.betrybe.com/desenvolvimento-web/yarn/">
+            <Typography sx={{ mb: 1, textAlign: "justify" }}>
                Yarn: comandos e introdução
-            </Link>
-         </Typography>
-         <Typography sx={{ mb: 1, textAlign: "justify" }}>
-            <Link href="https://prensa.li/prensa/como-criar-um-sistema-crud-com-o-prisma/">
+            </Typography>
+         </Link>
+         <Link href="https://prensa.li/prensa/como-criar-um-sistema-crud-com-o-prisma/">
+            <Typography sx={{ mb: 1, textAlign: "justify" }}>
                Prisma: Como instanciar a classNamee client e outras dicas
-            </Link>
-         </Typography>
+            </Typography>
+         </Link>
          <Typography sx={{ mb: 1, textAlign: "justify" }}>
             <strong>Boa sorte!</strong>
          </Typography>
