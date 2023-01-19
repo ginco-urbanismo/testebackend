@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const StyledLink = ({ href, children }) => {
    return (
-      <Link href={href} style={{ color: "var(--white)", textDecoration: "none" }}>
+      <Link href={href} style={{ textDecoration: "none" }}>
          {children}
       </Link>
    );
@@ -87,7 +87,7 @@ export function ResponsiveAppBar() {
                   >
                      {pages.map((page) => (
                         <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                           <StyledLink href={page.href}>
+                           <StyledLink style={{ color: "var(--text)" }} href={page.href}>
                               <Typography textAlign="center">{page.title}</Typography>
                            </StyledLink>
                         </MenuItem>
@@ -114,9 +114,12 @@ export function ResponsiveAppBar() {
                </Typography>
                <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                   {pages.map((page) => (
-                     <StyledLink href={page.href}>
+                     <StyledLink
+                        style={{ color: "var(--white)" }}
+                        key={page.title}
+                        href={page.href}
+                     >
                         <Button
-                           key={page.title}
                            onClick={handleCloseNavMenu}
                            sx={{ my: 2, color: "white", display: "block" }}
                         >

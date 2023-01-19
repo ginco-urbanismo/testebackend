@@ -80,7 +80,7 @@ export default function Home() {
          <Box>
             <Container sx={{ my: 10 }}>
                <Grid container spacing={2}>
-                  <Grid xs={4}>
+                  <Grid md={4} xs={12}>
                      <TextField
                         fullWidth
                         id="data"
@@ -92,7 +92,7 @@ export default function Home() {
                         variant="outlined"
                      />
                   </Grid>
-                  <Grid xs={4}>
+                  <Grid md={4} xs={12}>
                      <TextField
                         fullWidth
                         id="nome"
@@ -104,7 +104,7 @@ export default function Home() {
                         variant="outlined"
                      />
                   </Grid>
-                  <Grid xs={4}>
+                  <Grid md={4} xs={12}>
                      <TextField
                         fullWidth
                         id="tipo"
@@ -116,7 +116,7 @@ export default function Home() {
                         variant="outlined"
                      />
                   </Grid>
-                  <Grid xs={12}>
+                  <Grid md={12} xs={12}>
                      <TextField
                         fullWidth
                         id="descricao"
