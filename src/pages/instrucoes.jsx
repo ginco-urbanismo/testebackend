@@ -124,8 +124,8 @@ function Instrucoes() {
                <pre>
                   <code>
                      {" "}
-                     localhost:xxxx/api/<span class="hljs-built_in">[SUA_API]</span>?
-                     <span class="hljs-built_in">date</span>=yyy-mm-dd
+                     localhost:xxxx/api/<span className="hljs-built_in">[SUA_API]</span>?
+                     <span className="hljs-built_in">date</span>=yyy-mm-dd
                   </code>
                </pre>
                <Typography sx={{ mb: 1, textAlign: "justify" }}>
@@ -169,23 +169,24 @@ function Instrucoes() {
          <code>
             <span>Requisição:</span>
             <br />
-            localhost:<span class="hljs-number">3000</span>/api/
-            <span class="hljs-built_in">[SUA_API]</span>?
-            <span class="hljs-built_in">date</span>=<span class="hljs-number">2023</span>
-            <span class="hljs-number">-01</span>
-            <span class="hljs-number">-01</span>
+            localhost:<span className="hljs-number">3000</span>/api/
+            <span className="hljs-built_in">[SUA_API]</span>?
+            <span className="hljs-built_in">date</span>=
+            <span className="hljs-number">2023</span>
+            <span className="hljs-number">-01</span>
+            <span className="hljs-number">-01</span>
             <br />
             <br />
             <span>Retorno:</span>
             <br />
             {"{"}
-            <span class="hljs-string">"data"</span>:
-            <span class="hljs-string">"2023-01-01T00:00:00.000Z"</span>,
+            <span className="hljs-string">"data"</span>:
+            <span className="hljs-string">"2023-01-01T00:00:00.000Z"</span>,
             <br />
-            <span class="hljs-string">"nome"</span>:
-            <span class="hljs-string">"Ano Novo"</span>, <br />
-            <span class="hljs-string">"descricao"</span>:
-            <span class="hljs-string">
+            <span className="hljs-string">"nome"</span>:
+            <span className="hljs-string">"Ano Novo"</span>, <br />
+            <span className="hljs-string">"descricao"</span>:
+            <span className="hljs-string">
                "O Ano-Novo ou Réveillon é um evento que acontece quando uma cultura
                celebra o fim de um ano e o começo do próximo. A celebração do evento é
                também chamada Réveillon, termo oriundo do verbo francês réveiller, que em
@@ -270,7 +271,7 @@ function Instrucoes() {
          </Typography>
          <Typography sx={{ mb: 1, textAlign: "justify" }}>
             <Link href="https://prensa.li/prensa/como-criar-um-sistema-crud-com-o-prisma/">
-               Prisma: Como instanciar a classe client e outras dicas
+               Prisma: Como instanciar a classNamee client e outras dicas
             </Link>
          </Typography>
          <Typography sx={{ mb: 1, textAlign: "justify" }}>
