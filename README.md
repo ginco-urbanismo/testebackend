@@ -84,7 +84,13 @@ Vamos baixar seu repositório e fazer os testes necessários para a avaliação.
 Esse teste ficará aberto para submissão até dia `24/01/2023`, esperamos que seja tempo suficiente para desenvolver o projeto.
 
 ## Notas:
-1) O Prisma já está instalado, configurado, sincronizado e os acessos estão gerados, você precisará apenas importar o prisma e prisma client para cada API. 
+1) O Prisma já está instalado, configurado, sincronizado e os acessos estão gerados, mas para iniciar o projeto, rode os comandos
+```
+yarn
+yarn prisma generate
+```
+para gerar os clientes do Prisma que você vai importar para cada API. 
+
 
 2) Caso não tenha experiência em yarn, prisma ou NextJS, aconselhamos que você leia os links enviados abaixo antes de iniciar o projeto. 
 
@@ -96,7 +102,7 @@ Esse teste ficará aberto para submissão até dia `24/01/2023`, esperamos que s
 
 Deixaremos abaixo alguns materiais para consulta que vão te ajudar a desenvolver o projeto, em ordem de relevância:
 
-[Documentação do Prisma (ignore as configurações iniciais, conforme tópico 2 acima)](https://www.prisma.io/docs/getting-started/quickstart)
+[Documentação do Prisma (ignore as configurações iniciais, conforme tópico 1 acima)](https://www.prisma.io/docs/getting-started/quickstart)
 
 [NextJS: Rotas de APIs (explore outros tópicos da documentação do NextJS em caso de dúvidas)](https://nextjs.org/learn/basics/api-routes/creating-api-routes)
 

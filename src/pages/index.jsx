@@ -42,7 +42,7 @@ export default function Home() {
                setUserInput({ data: "", nome: "", tipo: "", descricao: "" });
             } else if (res.status === 500) {
                setSnackProps({
-                  text: "Não foi possível salvar seu voto, contate um administrador",
+                  text: "Erro ao salvar feriado",
                   type: "error",
                });
                setSnackOpen(true);
