@@ -39,6 +39,7 @@ export default function Home() {
                   text: "Feriado registrado com sucesso! :)",
                   type: "success",
                });
+               setSnackOpen(true);
                setUserInput({ data: "", nome: "", tipo: "", descricao: "" });
             } else if (res.status === 500) {
                setSnackProps({
