@@ -10,9 +10,9 @@ _Dev Backend_ da [Ginco](https://gincourbanismo.com.br/aginco/2/ha-20-anos-te-aj
 
 ## O problema
 
-Um Dev Backend na Ginco terá como uma das principais atividades o consumo e criação de APIs para integrar aplicações, por isso o teste envolve a criação de uma API básica utilizando Prisma integrada a um DB SQL hospedado no PlanetScale (As tabelas do DB estão implementadas e pronto pra uso), desenvolvida em NextJS. Caso não conheça essas tecnologias, fique tranquilo, no fim dessa documentação colocamos alguns links básicos para referência.
+Um Dev Backend na Ginco terá como uma das principais atividades o consumo e criação de APIs para integrar aplicações, por isso o teste envolve a criação de uma API básica utilizando Prisma integrada a um DB SQL hospedado no PlanetScale (As tabelas do DB estão implementadas e prontas pra uso), desenvolvida em NextJS. Caso não conheça essas tecnologias, fique tranquilo, no fim dessa documentação colocamos alguns links básicos para referência.
 
-Nossa API deve ter a função de inserir feriados nacionais presentes em um JSON no DB e também possibilitar a inserção de mais feriados por input via um form simples (o forma já está implementado e pronto pra uso).
+Nossa API deve ter a função de inserir feriados nacionais presentes em um JSON no DB e também possibilitar a inserção de mais feriados por input via um form simples (o form já está implementado e pronto pra uso).
 
 Esse repositório deve ser clonado por você para que você desenvolva com base na estrutura de projeto já criada nele. Suas APIs, seguindo a documentação do NextJS, devem ser criadas no diretório /src/pages/api.
 
@@ -48,25 +48,28 @@ Você deve desenvolver as seguintes funcionalidades:
    3.1) A rota deve ter a seguinte estrutura:
 
    ```
-       localhost:xxxx/api/read?date=yyy-mm-dd
+       localhost:3000/api/[SUA_API]?date=yyy-mm-dd
    ```
 
    3.2) Quando receber uma data válida, deve fazer a busca na tabela e retornar status 200 e todos os campos de informação do feriado buscado.
 
    3.3) Quando receber uma data válida, porém não encontrar uma data correspondente na tabela, deve retornar status 202 e o texto: "Essa data não é um feriado".
 
-   3.4) Quando receber uma data inválida, ex: 32-14-2023, deve retornar status: 201 e o texto: "Data invalida, use o formato {link-api}?date=YYYY-MM-DD"
+   3.4) Quando receber uma data inválida, ex: 32-14-2023, deve retornar status: 400 e o texto: "Data invalida, use o formato [API]?date=YYYY-MM-DD"
 
 4. Uma rota que vai receber um input do formulário acessível na página principal do repositório.
 
    4.1) Esse formulário está configurado para fazer a requisição para o arquivo "criaferiado.js", localizado no diretório /src/pages/api. Crie sua função dentro desse arquivo.
 
-   4.1) A função criada deve inserir o feriado na tabela usando os mesmos campos citados acima. E deve retornar status 201, caso tenha inserido com sucesso na tabela e status 500 caso tenha ocorrido algum erro na inserção. O frontend está configurado para tratar esses status.
+   4.1) A função criada deve inserir o feriado na tabela usando os mesmos campos citados acima. E deve retornar status 201, caso tenha inserido com sucesso na tabela e status 500 caso tenha ocorrido algum erro na inserção. O frontend está configurado para receber e tratar esses status.
 
 Exemplo - O comportamento ao buscar o feriado do dia 1 de janeiro de 2023, para tópico 3, deve ser, como segue:
 
 ```
-localhost:3000/api/read?date=2023-01-01
+requisição:
+localhost:3000/api/[SUA_API]?date=2023-01-01
+
+retorno:
 {
     "data":"2023-01-01T00:00:00.000Z",
     "nome":"Ano Novo",
@@ -77,7 +80,7 @@ localhost:3000/api/read?date=2023-01-01
 ## Avaliação
 
 
-Por fim, quando concluir suas implementações, suba um repositório público no seu Github e envie o link pelo meio de comunicação pelo qual você notificado sobre o teste, informando a conclusão. 
+Por fim, quando concluir suas implementações, suba um repositório público no seu Github e envie o link pelo meio de comunicação pelo qual você foi notificado sobre o teste, informando a conclusão. 
 
 Vamos baixar seu repositório e fazer os testes necessários para a avaliação.
 
@@ -86,7 +89,6 @@ Esse teste ficará aberto para submissão até dia `24/01/2023`, esperamos que s
 ## Notas:
 1) O Prisma já está instalado, configurado, sincronizado e os acessos estão gerados. 
 Você precisará apenas rodar o comando yarn para inciar o projeto e depois importar o prisma client para cada API.
-
 
 2) Caso não tenha experiência em yarn, prisma ou NextJS, aconselhamos que você leia os links enviados abaixo antes de iniciar o projeto. 
 
