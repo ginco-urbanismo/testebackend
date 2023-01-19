@@ -57,7 +57,7 @@ export default function Home() {
       }
    };
 
-   const handleClose = (event) => {
+   const handleClose = (event, reason) => {
       if (reason === "clickaway") {
          return;
       }
